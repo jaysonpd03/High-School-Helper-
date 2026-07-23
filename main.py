@@ -1,12 +1,5 @@
-from pydantic_ai import Agent
-from pydantic_ai.models.ollama import OllamaModel
-from pydantic_ai.providers.ollama import OllamaProvider
+from app.agent import agent
 
-
-model = OllamaModel("qwen3:1.7b", provider=OllamaProvider(base_url="http://localhost:11434/v1"), )
-
-agent = Agent(model)
-
-result = agent.run_sync("Say hello in one sentence.")
+result = agent.run_sync("A ball is thrown upward on Mars with an initial velocity of 30 m/s. How long until it stops rising? Mars has a gravity of g=3.721 m/s^2")
 
 print(result.output)
