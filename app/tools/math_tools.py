@@ -9,6 +9,102 @@ def debug():
 	return print("Tool called!")
 
 
+def addition(x: float, y: float) -> float:
+	"""
+	Tool to calculate the addition of two numbers
+
+	Use this tool whenever the user asks:
+		- x + y
+		- What is x plus y?
+		- x + (-y)
+		
+	Arguments:
+		x: a real number 
+		y: a real number
+
+	Returns:
+		The summation of two real numbers
+	"""
+	# Debug
+	debug()
+
+	return x + y
+
+
+def subtration(x: float, y: float) -> float:
+	"""
+	Tool to calculate the subtraction of two real numbers
+
+	Use this tool when the users asks:
+	- x - y
+	- What is x minus y
+	- What is x subtracted by y
+	- x - (-y)
+	- What is the difference between x and y
+
+	Arguments:
+		x: a real number
+		y: a real number
+
+	Returns:
+		The result of a number subtracted by another
+	"""
+
+	# Debug
+	debug()
+
+	return x - y
+
+
+def multiplication(a: float, b: float) -> float:
+	"""
+	Tool to calculate the multiplication of two numbers
+
+	Use this tool whenever the user asks:
+		- a * b
+		- What is a times b?
+		- What is a multiplied by b?
+		- a * (-b)
+		- a x b
+		- What is the product of a and b?
+		
+	Arguments:
+		a: a real number 
+		b: a real number
+
+	Returns:
+		The product of two real numbers
+	"""
+	# Debug
+	debug()
+
+	return a * b
+
+
+def division(a: float, b: float) -> float:
+	"""
+	Tool to calculate the division of two real numbers
+
+	Use this tool when the users asks:
+	- a / b
+	- What is a divided by b
+	- What is the quotient of a and b
+	- a / (-b)
+
+	Arguments:
+		a: a real number
+		b: a real number
+
+	Returns:
+		The quotient of two real numbers 
+	"""
+
+	# Debug
+	debug()
+
+	return a / b
+
+
 def square_root(value: float) -> float:
 	"""
 	 Calculate the square root of a non-negative number
@@ -109,9 +205,6 @@ def calculate_exponent(base: float, exponent: float) -> float:
 	return base ** exponent
 
 
-
-
-
 def absolute_value(number: float) -> float:
 	"""
 		Compute the absolute value of a number
@@ -133,3 +226,37 @@ def absolute_value(number: float) -> float:
 	debug()
 
 	return abs(number)
+
+
+def calculate_factorial(number: float) -> float:
+	"""
+		This tool calculates the factorial of a non-negative integer 
+
+		Use this tool when the user asks:
+		- Evaluate x!
+		- What is the factorial of 4
+		- Evaluate -x!
+		- 3.5!
+
+		Arguments:
+			number: the base number for the factorial
+
+		Returns:
+			The results of factorial multiplication
+	"""
+
+	# Debug
+	debug()
+
+	# Check if non-negative
+	if number < 0:
+		raise ValueError("Factorials are only defined for non-negative integers")
+
+	# Check if an integer
+	if not number.is_integer():
+		raise ValueError("Factorials are only defined for integers")
+
+	return math.factorial(int(number))
+
+
+

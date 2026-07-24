@@ -2,7 +2,7 @@ from pydantic_ai import Agent
 from pydantic_ai.models.ollama import OllamaModel
 from pydantic_ai.providers.ollama import OllamaProvider
 
-from app.tools.math_tools import square_root, quadratic_solver, calculate_exponent, absolute_value
+from app.tools.math_tools import addition, subtraction, multiplication, division, square_root, quadratic_solver, calculate_exponent, absolute_value, calculate_factorial
 from app.tools.physics_tools import time_to_max_height
 
 # What model is the agent using?
@@ -28,11 +28,16 @@ agent = Agent(
 
 	# Library of 'tools' for agent to use
 	tools= [
+			addition,
+			subtraction,
+			multiplication,
+			division,
 			square_root, 
 			time_to_max_height,
 			quadratic_solver,
 			calculate_exponent,
-			absolute_value
+			absolute_value,
+			calculate_factorial
 
 
 			]
