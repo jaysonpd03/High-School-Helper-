@@ -31,7 +31,7 @@ def addition(x: float, y: float) -> float:
 	return x + y
 
 
-def subtration(x: float, y: float) -> float:
+def subtraction(x: float, y: float) -> float:
 	"""
 	Tool to calculate the subtraction of two real numbers
 
