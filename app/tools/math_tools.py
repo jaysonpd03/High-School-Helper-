@@ -6,7 +6,7 @@ def square_root(value: float) -> float:
 	 Calculate the square root of a non-negative number
 
 	 Arguments:
-	 	value: The number to find the square root of. 
+	 	value: The number to find the square root of 
 
 	 Returns:
 	 	The square root of value
@@ -18,3 +18,54 @@ def square_root(value: float) -> float:
 		raise ValueError("Square root is only defined for non-negative numbers.")
 
 	return math.sqrt(value)
+
+
+def quadratic_solver(a: float, b: float, c: float):
+	"""
+	Solve a quadratic equation using the quadratic formula
+
+	Arguments:
+		a: coefficient of x^2
+		b: coefficient of x
+		c: constant (non-variable term)
+
+	Returns: 
+		dictionary of roots/solutions
+	"""
+
+	# Debug line
+	print("Tool called!")
+
+	# Check to see if equation is quadratic
+	if a==0:
+		raise ValueError("Equation is not quadratic.")
+
+	# Discriminant check to see where solution lies and best course to solve
+	discriminant = b**2 - 4*a*c
+	if discriminant > 0:
+		root1 = (- b + math.sqrt(discriminant)) / (2*a)
+		root2 = (- b - math.sqrt(discriminant)) / (2*a)
+
+		return { 
+					"discriminant": discriminant,
+					"root1": root1, 
+					"root2": root2,
+					"nature": "two real solutions"
+				}
+	elif discriminant < 0:
+		return { 
+					"discriminant": discriminant,
+					"root1": None,
+					"root2": None,
+					"nature": "two complex solutions"
+				}
+	else:
+		root = - b / (2*a)
+		return { 
+					"discriminant": discriminant,
+					"root1": root, 
+					"root2": root,
+					"nature": "One repeated real solution"
+				}
+
+
