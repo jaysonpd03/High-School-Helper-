@@ -75,6 +75,8 @@ def quadratic_solver(a: float, b: float, c: float):
 					"root2": root,
 					"nature": "One repeated real solution"
 				}
+
+
 def calculate_exponent(base: float, exponent: float) -> float:
 	"""
 	Function to compute exponentiation
@@ -108,3 +110,26 @@ def calculate_exponent(base: float, exponent: float) -> float:
 
 
 
+
+
+def absolute_value(number: float) -> float:
+	"""
+		Compute the absolute value of a number
+
+		Use this tool when needing to:
+			- Find the distance from zero
+			- Remove a negative sign
+			- evaluate |x|
+			- compute an absolute value
+
+		Arguments:
+			number: any real number
+
+		Returns:
+			Non-negative absolute value of the number
+	"""
+
+	# Debug
+	debug()
+
+	return abs(number)
