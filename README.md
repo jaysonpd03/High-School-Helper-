@@ -29,7 +29,7 @@ Constant-acceleration kinematics including:
 
 The project is organized into three primary components.
 
-'''
+```
 app/
 │
 ├── agent.py
@@ -40,7 +40,7 @@ app/
 │
 └── main.py
       Simple interface for interacting with the agent.
-'''
+```
 
 The agent uses:
 - PydanticAI
@@ -51,14 +51,14 @@ Each mathematical or physics operation is implemented as an independent Python f
 
 ## Running the Project
 Start an Ollama server
-'''bash
+```bash
 ollama serve
-'''
+```
 
 Run the application
-'''bash
+```bash
 python main.py
-'''
+```
 
 ## Notes
 This project was intentionally designed around small, reusable tools instead of creating dedicated functions for individual problems. The objective was to allow the model to identify the type of problem being solved, use an appropriate computation tool, and then generate a student-friendly explaination from the returned results. 
